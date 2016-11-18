@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="css/jk-carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/all-font.css">
+	<link rel="stylesheet" type="text/css" href="css/all-images.css">
+	<link rel="stylesheet" type="text/css" href="css/homepage.css">
+	<style type="text/css">
+		.menudemoBasicUsage .md-menu-demo {padding: 24px}
+		.menudemoBasicUsage .menu-demo-container {min-height: 200px}
+	</style>
+</head>
+<body ng-app="homeModule">
+	<!-- Navigation menu -->
+	<div ng-controller="homeController" layout="column" layout-fill="layout-fill" ng-cloak>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<md-button ng-click="toggleSidenav()" class="md-icon-button">
+					<md-icon aria-label="Menu" class="material-icons">menu</md-icon>
+				</md-button>
+				<h3>Restaurant Supplies</h3>
+				<div flex layout-align="center center">						    				
+						<md-input-container md-no-float class="md-block">					        
+							<input ng-model="searchText" placeholder="Search products.." ng-change="searchProducts()">
+						</md-input-container>
+				</div>
+				<div flex="10">
+					<md-menu>
+						<md-button aria-label="Open cart menu" class="md-icon-button" ng-click="openCartMenu($mdOpenMenu, $event)">
+							<i class="material-icons">shopping_cart</i>
+						</md-button>
+						<md-menu-content width="6">
+							<md-menu-item>
+								<md-button ng-click="redial($event)">
+									<md-icon md-svg-icon="" md-menu-align-target></md-icon>
+									Redial
+								</md-button>
+							</md-menu-item>
+						</md-menu-content>
+					</md-menu>
+					<md-menu>				
+						<md-button aria-label="Open profile options menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
+							<i class="material-icons">person</i>							
+						</md-button>
+						<md-menu-content width="4">
+							<md-menu-item>
+								<md-button ng-click="redial($event)">
+									<md-icon md-svg-icon="" md-menu-align-target></md-icon>
+									Redial
+								</md-button>
+							</md-menu-item>					
+							<md-menu-item>
+								<md-button ng-click="redial($event)">
+									<md-icon md-svg-icon="" md-menu-align-target></md-icon>
+									Redial
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button ng-click="redial($event)">
+									<md-icon md-svg-icon="" md-menu-align-target></md-icon>
+									Redial
+								</md-button>
+							</md-menu-item>
+						</md-menu-content>
+					</md-menu>
+				</div>								
+			</div>			
+		</md-toolbar>
+		<md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z2">
+			<md-list>
+				<md-list-item ng-repeat="item in list" md-ink-ripple="#3F51B5" class="pointer">
+					<md-icon aria-label="{{item.label}}" class="material-icons">{{item.icon}}</md-icon>
+					<p>{{item.name}}</p>
+				</md-list-item>
+			</md-list>
+		</md-sidenav> <!-- sidenav ends here -->
+		<md-content flex="flex">			
+			<main layout-margin="layout-margin">
+				<md-card layout="column" layout-align="center center" style="padding-bottom: 10px" >
+					<jk-carousel
+						data="dataArray"
+						item-template-url="'item-template.html'"
+						max-width="800" 
+						max-height="500"
+						auto-slide="true"
+						auto-slide-time="2000" >
+					</jk-carousel>
+				</md-card>	<!-- the carousel ends here -->			
+				<!-- cards for top products -->
+				<div layout="row" layout-xs="column" layout-sm="column">				
+					<md-card>
+						<img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+						<md-card-title>
+							<md-card-title-text>
+								<span class="md-headline">Vertical action buttons</span>
+							</md-card-title-text>
+						</md-card-title>
+						<md-card-content>
+							<p>
+								The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+								two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+							</p>
+						</md-card-content>
+						<md-card-actions layout="column" layout-align="start">
+							<md-button>Action 1</md-button>
+							<md-button>Action 2</md-button>
+						</md-card-actions>
+					</md-card>								
+					<md-card>
+						<img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+						<md-card-title>
+							<md-card-title-text>
+								<span class="md-headline">Vertical action buttons</span>
+							</md-card-title-text>
+						</md-card-title>
+						<md-card-content>
+							<p>
+								The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+								two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+							</p>
+						</md-card-content>
+						<md-card-actions layout="column" layout-align="start">
+							<md-button>Action 1</md-button>
+							<md-button>Action 2</md-button>
+						</md-card-actions>
+					</md-card>								
+					<md-card>
+						<img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+						<md-card-title>
+							<md-card-title-text>
+								<span class="md-headline">Vertical action buttons</span>
+							</md-card-title-text>
+						</md-card-title>
+						<md-card-content>
+							<p>
+								The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+								two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+							</p>
+						</md-card-content>
+						<md-card-actions layout="column" layout-align="start">
+							<md-button>Action 1</md-button>
+							<md-button>Action 2</md-button>
+						</md-card-actions>
+					</md-card>								
+					<md-card>
+						<img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+						<md-card-title>
+							<md-card-title-text>
+								<span class="md-headline">Vertical action buttons</span>
+							</md-card-title-text>
+						</md-card-title>
+						<md-card-content>
+							<p>
+								The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+								two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+							</p>
+						</md-card-content>
+						<md-card-actions layout="column" layout-align="start">
+							<md-button>Action 1</md-button>
+							<md-button>Action 2</md-button>
+						</md-card-actions>
+					</md-card>				
+			</div><!-- cards for top products ends-->
+			<!-- this is the section for the product slider and offer section -->
+			<div layout="column" layout-gt-xs="row" >
+				<md-card flex flex-gt-xs="50">					
+					<div layout="row">
+						<md-card-content flex flex-gt-xs=30>
+							<p>Some content</p>
+						</md-card-content>
+						<md-card-content flex flex-gt-xs=30>
+							<p>Some content</p>
+						</md-card-content>
+						<md-card-content flex flex-gt-xs=30>
+							<p>Some content</p>
+						</md-card-content>
+					</div>
+				</md-card>
+				<md-card flex >
+					<h2>Card title #2</h2>
+					<md-card-content>
+						<p>Some content</p>
+					</md-card-content>
+				</md-card>
+			</div><!-- this is the section for the product slider and offer section -->
+
+			<!-- the contact us form starts here -->
+				<div layout="row" layout-align="center center">
+					<span>Contact Us</span>
+				</div>
+				<div layout="row" layout-xs="column" layout-sm="column" layout-align="center center">	
+					<div layout="row" layout-align="center center">
+								<md-input-container>
+								<label>Name</label>
+								<input md-maxlength="30" required name="name" ng-model="user.name" />
+								<div class="hint" ng-if="showHints">Tell us what we should call you!</div>			
+							</md-input-container>
+						</div>
+						<div layout="row" layout-align="center center">					
+							<md-input-container flex-gt-sm>
+							<label>Email</label>
+							<input name="email" ng-model="user.email"
+							required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+							<div class="hint" ng-show="showHints">How can we reach you?</div>
+						</md-input-container>												
+					</div>
+					<div layout="row" layout-align="center center">	
+						<md-input-container>
+						<label>Phone Number</label>
+						<input name="phone" ng-model="user.phone" ng-pattern="/^[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}$/" />
+						<div class="hint" ng-show="showHints">(###) ###-####</div>						
+					</md-input-container>						
+				</div>
+			</div> <!-- the contact us form ends here -->
+
+			<div layout="row" style="background: #e3e3e3;">
+				<div flex="30">About Us</div>				
+				<div flex="40">E-mail : tomar.shivir@gmail.com</div>
+				<div flex="30">Contact Us</div>
+			</div>
+		</main>
+	</md-content>
+</div>
+<!-- Navigation menu ends-->
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script type="text/javascript" src="js/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+<script src="js/jk-carousel.min.js"></script>
+<script type="text/javascript" src="homeModule.js"></script>
+<script type="text/javascript" src="services/homeServices.js"></script>
+<script type="text/javascript" src="controller/productpage.js"></script>
+</body>
+</html>
+
+
+

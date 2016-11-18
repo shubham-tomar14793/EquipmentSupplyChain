@@ -1,0 +1,22 @@
+{
+  "name": "restaurant-products-app",
+  "version": "1.0.0",
+  "description": "purchase products required for restaurant online",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shubham",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "grunt": "^1.0.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-express-server": "^0.5.3"
+  }
+}

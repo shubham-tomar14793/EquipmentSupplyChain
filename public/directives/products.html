@@ -1,0 +1,34 @@
+<div ng-repeat="product in productList.products">
+	<div layout="column" layout-gt-xs="row" ng-repeat="productDes in product">
+		<img ng-src="{{productDes.productImagePath}}" class="md-card-image" alt="Washed Out">
+		<md-card>		        
+			<md-card-title>
+				<md-card-title-text>
+				<span class="md-headline" >{{productDes.productHeading}}</span>
+				<span class="md-subhead">{{productDes.productSubHeading}}</span>
+			</md-card-title-text>
+			</md-card-title>
+			<md-card-content>
+				<md-list-item class="md-1-line" >			          
+					<div class="md-list-item-text" layout="column">			            
+						<p>RS.{{productDes.price}}</p>
+						<p>{{productDes.productDescription}}</p>
+						<p>{{productDes.productDescription}}</p>
+					</div>
+				</md-list-item>
+			</md-card-content>
+			<md-card-actions layout="row" layout-align="start center">
+				<md-button class="md-icon-button" aria-label="Mark Favorite">
+					<i class="material-icons">favorite_border</i>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="See full Description">
+					<i class="material-icons">description</i>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="Add to Cart">
+					<i class="material-icons">add_shopping_cart</i>
+				</md-button>
+				<md-button>Buy</md-button>		          
+			</md-card-actions>
+		</md-card>	
+	</div>	      
+</div>

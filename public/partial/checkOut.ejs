@@ -1,0 +1,51 @@
+<div ng-controller="checkoutController">	
+	<div class="products-info-list">
+		<div layout="column" layout-gt-xs="row">
+			<div flex="25">
+				<h4>Total Product Purchased</h4>
+				<span>123</span>
+			</div>
+			<div flex="25">
+				<h4>Total Amount</h4>
+				<span>1234.00</span>
+			</div>
+			<div flex="25">
+				<h4>Estimated Delivery</h4>
+				<span>DD/MM/YYYY</span>
+			</div>
+			<div flex="25">
+				<h4>Delivery Address</h4>
+				<span>House no 16 street no 1 west kanti nagar delhi 51</span>
+				<div class="dialog-demo-content" layout="row" layout-wrap>
+			  		<md-button class="md-primary md-raised" ng-click="showPrompt($event)" >
+				      Edit
+				    </md-button>
+				</div>
+			</div>
+		</div>
+		<div class="productContainer" layout="column">
+	  		<h2 class="md-title">Product(s) to be purchased</h2>
+			<div layout="column" layout-gt-xs="row">  	
+			  	<img ng-src="images/logo.png" label="prduct image" />
+			  	<div layout="column" flex="50">
+			  		<h3 class="md-title">One Plus X</h3>
+			  		<p>this is the place of description for the product.</p>
+			  		<md-button>Remove this item</md-button>
+			  	</div>
+			  	<div layout="column" flex="20">
+			  		<div layout="row">
+			  			<div flex="50">Price Per Item</div>
+			  			<div flex="50">Quantity</div>
+			  		</div>
+			  		<div>
+			  			<span>Total Amount</span>
+			  		</div>
+			  	</div>
+			<div>		
+	    </div>          
+	</div>
+	<div layout="row">			
+		<md-button class="md-raised md-warn">Review Items</md-button>
+		<md-button class="md-raised md-primary">Place Order</md-button>			
+	</div> 
+</div>

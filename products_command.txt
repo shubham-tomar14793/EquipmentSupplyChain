@@ -1,0 +1,7 @@
+{
+productimg : "images/product1.png",
+productname : "One plus X",
+briefdesc : "this is the description",
+keyfeature : [{keyfeature1 : "mast phone boss"},{keyfeature2 : "Ram 3GB"},{keyfeature3 : "android platfom with oxygen OS"}],
+price : "15000"
+}

@@ -1,0 +1,52 @@
+<md-bottom-sheet class="" ng-style="bottomListStyle">
+  <div layout="column" layout-gt-xs="row">
+      <div flex="50">        
+          <section>
+            <md-subheader class="md-primary">Product Reviews</md-subheader>
+            <md-list layout-padding style="height:300px;overflow-y:scroll">
+              <md-list-item class="md-3-line" ng-repeat="message in messages">                  
+                  <div class="md-list-item-text">
+                    <h3>{{message.what}}<span style="font-size:10px;font-color:e1e1e1">given by ~ {{message.who}}</span></h3>                    
+                    <p>
+                      {{message.notes}}
+                    </p>
+                  </div>
+              </md-list-item>
+            </md-list>
+          </section>
+      </div>
+      <div flex="50">        
+        <md-subheader class="md-primary">Product Ratings</md-subheader>
+        <div layout="column">
+          <h3>100323</h3>
+          <span>total ratings</span>
+        </div>
+        <div layout="row">
+          <div class="rating-card" flex="20">
+            <h3>5 Star</h3>
+            <span>10000 ratings</span>            
+          </div>
+          <div class="rating-card" flex="20">
+            <h3>4 Star</h3>
+            <span>10000 ratings</span>
+          </div>
+          <div class="rating-card" flex="20">
+            <h3>3 Star</h3>
+            <span>10000 ratings</span>
+          </div>
+          <div class="rating-card" flex="20">
+            <h3>2 Star</h3>
+            <span>10000 ratings</span>
+          </div>
+          <div class="rating-card" flex="20">
+            <h3>1 Star</h3>
+            <span>10000 ratings</span>
+          </div>
+        </div>
+        <div layout="column">
+          <h3>4.3</h3>
+          <span>average rating</span>
+        </div>        
+      </div>
+  </div>
+</md-bottom-sheet>

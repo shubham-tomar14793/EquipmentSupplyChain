@@ -1,0 +1,16 @@
+<div ng-repeat="suggestedProduct in suggestedProductList.suggestedProducts">
+    <md-card ng-repeat="suggestedProdDesc in suggestedProduct">
+        <img ng-src="{{suggestedProdDesc.imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="center center">
+            <md-button class="md-icon-button" aria-label="Favorite">
+                <i class="material-icons">favorite_border</i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Offer">
+                <i class="material-icons">local_offer</i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="See Offer Description">
+                <i class="material-icons">description</i>
+            </md-button>
+        </md-card-actions>
+    </md-card>
+</div>

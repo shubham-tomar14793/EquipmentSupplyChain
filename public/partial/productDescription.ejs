@@ -1,0 +1,120 @@
+<style type="text/css">
+	.detailed-desc{padding:0 35px}
+
+/* for the rating and review of the product */
+.bottomSheetdemoBasicUsage .md-inline-list-icon-label {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 100px;
+  height: 24px;
+  vertical-align: middle; }
+
+.bottomSheetdemoBasicUsage .md-grid-item-content {
+  height: 90px;
+  padding-top: 10px; }
+
+.bottomSheetdemoBasicUsage .md-grid-item-content md-icon {
+  height: 48px;
+  width: 48px; }
+
+.bottomSheetdemoBasicUsage .md-grid-text {
+  padding-bottom: 5px; }
+
+.bottomSheetdemoBasicUsage md-list-item, .bottomSheetdemoBasicUsage md-list-item .md-list-item-inner {
+  min-height: 48px; }
+
+.bottomSheetdemoBasicUsage h2 {
+  line-height: 36px;
+  padding-top: 10px; }
+
+.bottomSheetdemoBasicUsage .md-subheader .md-subheader-inner {
+  padding: 0; }
+
+.bottomSheetdemoBasicUsage md-toast .md-toast-content {
+  background-color: #B14141; }
+
+.bottomSheetdemoBasicUsage md-toast > * {  font-weight: bolder; }
+.rating-card{border:1px solid #e1e1e1}
+
+/******     ******/
+
+</style>
+<div ng-app="homeModule" ng-controller="productDescController" ng-style="bottomListStyle">
+	<div layout="column" layout-gt-xs="row">	
+		<div flex="70" layout-align="center start">		 
+		      <md-card>	        
+		        <md-card-content layout="column" layout-gt-xs="row" layout-align="space-between">
+		          <div class="md-media-xl card-media">
+		          	<img ng-src="images/logo.png" class="prod-image" alt="Washed Out">
+		          </div>	          		          		    
+		          <md-list-item class="md-1-line" >			          
+			          <div class="md-list-item-text" layout="column">			            
+			            <p>Description will come here the dscription can be of any width</p>
+			            <p>Description will come here</p>
+			            <p>Description will come here</p>
+			            <p>Description will come here</p>
+			            <p>Description will come here</p>
+			            <p>Description will come here</p>
+			            <p>Description will come here</p>
+			          </div>
+			      </md-list-item>		      	          
+		        </md-card-content>
+		        <div layout="column" class="detailed-desc" >
+			      	<p>
+			      	  Description will come here the dscription can be of any width Description will come here the dscription can be of any width Description will come here the dscription can be of any width Description will come here the dscription can be of any width
+			      	</p>
+			      	<md-card-actions layout="row" layout-align="start center">
+			          <md-button class="md-icon-button" aria-label="Mark Favorite">
+			            <i class="material-icons">favorite_border</i>
+			          </md-button>
+			          <md-button class="md-icon-button" aria-label="See full Description">
+			            <i class="material-icons">description</i>
+			          </md-button>
+			          <md-button class="md-icon-button" aria-label="Add to Cart">
+			          	<i class="material-icons">add_shopping_cart</i>
+			          </md-button>
+			          <md-button>Buy</md-button>		          
+			        </md-card-actions>
+			    </div> 
+	      </md-card>      
+		</div>
+		<div flex="30">
+			<!-- offers section to be written here -->
+		</div>	
+	</div>
+	<div layout="column">
+		   <h3>Suggested products</h3>
+	</div>		
+	<div layout="column" layout-gt-xs="row">	
+		<div flex="25">
+			<img ng-src="images/logo.png" class="prod-image" alt="Washed Out">			
+			<div class="property-description">
+				<p> this is the description of the product for this specific property it posess</p>
+			</div>
+		</div>
+		<div flex="25">
+			<img ng-src="images/logo.png" class="prod-image" alt="Washed Out">			
+			<div class="property-description">
+				<p> this is the description of the product for this specific property it posess</p>
+			</div>
+		</div>
+		<div flex="25">
+			<img ng-src="images/logo.png" class="prod-image" alt="Washed Out">			
+			<div class="property-description">
+				<p> this is the description of the product for this specific property it posess</p>
+			</div>
+		</div>
+		<div flex="25">
+			<img ng-src="images/logo.png" class="prod-image" alt="Washed Out">			
+			<div class="property-description">
+				<p> this is the description of the product for this specific property it posess</p>
+			</div>
+		</div>
+	</div>
+	<div layout="column" layout-gt-xs="row" ng-controller="ratingAndReviewController">
+		<div class="bottom-sheet-demo inset" layout="row" layout-align="center" >
+	      <md-button flex="100" class="md-primary md-raised" ng-click="showListBottomSheet()">See Product review and Ratings</md-button>    
+	  </div>
+	</div>
+</div>

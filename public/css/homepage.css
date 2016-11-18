@@ -1,0 +1,13 @@
+.menudemoBasicUsage .md-menu-demo {padding: 24px}
+.menudemoBasicUsage .menu-demo-container {min-height: 200px}
+.top-products div{border:1px solid;margin: 10px;border-radius: 10px}
+
+.SearchBox{padding: 0 5%}
+.searchinput{margin-top: 45px}
+.material-icons{margin-left:0;margin-right:16px}
+.material-icons img{width:20px}
+
+.see-more-btn{width:30px}
+.quick-view{border:1px solid #e3e3e3}
+.contact-us-section{padding:20px;width: 40%;border:1px solid #e3e3e3;border-radius: 15px;box-shadow: 0px 0px 10px}
+.heading-contact-us{font-size: 24px;text-align: center;}

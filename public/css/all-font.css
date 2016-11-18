@@ -1,0 +1,9 @@
+.top-products div{text-align: center;}
+.top-products span{font-size: 30px;color:rgb(80,80,80);font-family: arial}
+
+.searchinput input::-webkit-input-placeholder { /* Chrome/Opera/Safari */  color: rgba(255,255,255,.8);}
+.searchinput input::-moz-placeholder { /* Firefox 19+ */  color: rgba(255,255,255,.8);}
+.searchinput input:-ms-input-placeholder { /* IE 10+ */  color: rgba(255,255,255,.8);}
+.searchinput input:-moz-placeholder { /* Firefox 18- */  color: rgba(255,255,255,.8);}
+.searchinput input{color: rgba(255,255,255,.8);border:1px solid;border-color:rgba(255,255,255,.5)!important;height: 35px;border-radius:5px;}
+.searchinput input:focus{border-width:1px 1px 1px !important;border-color:rgba(255,255,255,1)!important}

@@ -1,7 +1,9 @@
 (function(){
 	var productDescControllerModule = angular.module('homeModule');
 	productDescControllerModule.controller('productDescController',['$scope','$http','productDescService',function($scope,$http,productDescService){
-		console.log(productDescService.getProductDescription());		
+		console.log(productDescService.getProductDescription());
+		$scope.productDescList = productDescService.getProductDescListProvider();
+		console.log($scope.productDescList);				
 	}]);
 	productDescControllerModule.controller('ratingAndReviewController',['$scope','$timeout', '$mdBottomSheet', '$mdToast',function($scope, $timeout, $mdBottomSheet, $mdToast){
 		$scope.showListBottomSheet = function() {
@@ -14,6 +16,8 @@
 				$scope.alert = clickedItem['name'] + ' clicked!';
 			});
 		};
+
+		
 	}]);
 	productDescControllerModule.controller('ListBottomSheetCtrl', ['$scope', '$mdBottomSheet', function($scope, $mdBottomSheet){
 		console.log("bottom sheet called");

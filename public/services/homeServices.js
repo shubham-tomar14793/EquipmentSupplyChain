@@ -111,7 +111,11 @@
 		};
 		function randomfunct(){return {'name':'shubham'}};
 		function _sliderImageDataProvider(){return sliderDataObj};
-		function _sideOpenMenuDataProvider(){return sideOpenMenuData};
+		function _sideOpenMenuDataProvider(){
+			 var data = $http.get('api/navList');
+			 console.log(data);
+			 return data;
+		};
 		function _productCategoryDataProvider(){return productCategoryData};
 		function _suggestedProductProvider(){return suggestedProduct};
 		function _offerPageDataProvider(){return offerData};

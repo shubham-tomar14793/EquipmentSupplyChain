@@ -43,41 +43,7 @@
 <div ng-app="homeModule" ng-controller="productDescController" ng-style="bottomListStyle">
 	<div layout="column" layout-gt-xs="row">	
 		<div flex="70" layout-align="center start">		 
-		      <md-card>	        
-		        <md-card-content layout="column" layout-gt-xs="row" layout-align="space-between">
-		          <div class="md-media-xl card-media">
-		          	<img ng-src="images/logo.png" class="prod-image" alt="Washed Out">
-		          </div>	          		          		    
-		          <md-list-item class="md-1-line" >			          
-			          <div class="md-list-item-text" layout="column">			            
-			            <p>Description will come here the dscription can be of any width</p>
-			            <p>Description will come here</p>
-			            <p>Description will come here</p>
-			            <p>Description will come here</p>
-			            <p>Description will come here</p>
-			            <p>Description will come here</p>
-			            <p>Description will come here</p>
-			          </div>
-			      </md-list-item>		      	          
-		        </md-card-content>
-		        <div layout="column" class="detailed-desc" >
-			      	<p>
-			      	  Description will come here the dscription can be of any width Description will come here the dscription can be of any width Description will come here the dscription can be of any width Description will come here the dscription can be of any width
-			      	</p>
-			      	<md-card-actions layout="row" layout-align="start center">
-			          <md-button class="md-icon-button" aria-label="Mark Favorite">
-			            <i class="material-icons">favorite_border</i>
-			          </md-button>
-			          <md-button class="md-icon-button" aria-label="See full Description">
-			            <i class="material-icons">description</i>
-			          </md-button>
-			          <md-button class="md-icon-button" aria-label="Add to Cart">
-			          	<i class="material-icons">add_shopping_cart</i>
-			          </md-button>
-			          <md-button>Buy</md-button>		          
-			        </md-card-actions>
-			    </div> 
-	      </md-card>      
+		  <product-description p-desc-list="productDescList"></product-description>          
 		</div>
 		<div flex="30">
 			<!-- offers section to be written here -->

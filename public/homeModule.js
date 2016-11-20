@@ -17,7 +17,8 @@
       		})
           .when("/checkout",{
             templateUrl : "/partial/checkOut.ejs"
-          });
+          })
+          .otherwise({redirectTo : '/'});
 
          /* $locationProvider.html5Mode({
             enabled:true,

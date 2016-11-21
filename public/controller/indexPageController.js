@@ -34,7 +34,8 @@
     return $mdSidenav('left').toggle();
   };
   $scope.dataArray = myService.sliderData();
-  $scope.list = myService.sideOpenMenu();
+  //$scope.list = myService.sideOpenMenu();
+  $scope.list = [];
   $scope.productCategoryList = myService.productCategory();
   $scope.suggestedProductList = myService.suggestedProductSlider();
   $scope.offerPageData = myService.offerPage();
@@ -49,6 +50,15 @@
       return $scope.names;
     }    
   }  
+
+
+  myService.sideOpenMenu().then(
+    function(response){
+      $scope.list = response.data;
+      console.log($scope.list);
+    },
+    function(response){}
+  );
 
 }]);
 })();

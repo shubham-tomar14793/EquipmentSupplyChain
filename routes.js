@@ -6,9 +6,10 @@ var directContact = require('./app/navigationalRoutes/directContact');
 var router = express.Router();
 
 router.get('/',function(req,res){
-	navigationList.find(function(err,navList){
+	navigationList.find(function(err,homePageContent){
 		if(err){res.send(err);}
-		res.send(navList);
+		console.log(homePageContent);
+		res.json(homePageContent);
 	});
 });
 //adminPage(app);

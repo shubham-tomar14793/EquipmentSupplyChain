@@ -2,21 +2,24 @@
 	var homeModule = angular.module('homeModule',['ngMaterial','jkAngularCarousel','ngRoute']);
 	homeModule.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider) {   
       $routeProvider.when("/", {
-            templateUrl : "/partial/homepageContent.ejs"
+            templateUrl : "/partial/homepageContent.ejs",
+            controller : 'homePageContentController'          
           })
       		.when("/productsPage",{
-      			templateUrl : "/partial/productsPage.ejs"
+      			templateUrl : "/partial/productsPage.ejs",
+            controller : 'productPageController'
       		})
           .when("/productsPage/:productType",{
             templateUrl : "/partial/productsPage.ejs",
-            controller : "ProductPageTypeController",
-            controllerAs : 'productPageType'
+            controller : "ProductPageTypeController"
           })
       		.when("/productDescription",{
-      			templateUrl : "/partial/productDescription.ejs"
+      			templateUrl : "/partial/productDescription.ejs",
+            controller : 'productDescController'
       		})
           .when("/checkout",{
-            templateUrl : "/partial/checkOut.ejs"
+            templateUrl : "/partial/checkOut.ejs",
+            controller : 'checkoutController'
           })
           .otherwise({redirectTo : '/'});
 

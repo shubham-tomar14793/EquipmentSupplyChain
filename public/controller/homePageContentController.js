@@ -7,14 +7,19 @@
 		$scope.offerPageData = [];
 
 		
+		//$scope.dataArray = homePageContentService.sliderData();
+		$scope.productCategoryList = homePageContentService.productCategory();
+		$scope.suggestedProductList = homePageContentService.suggestedProductSlider();
+		$scope.offerPageData = homePageContentService.offerPage();
 		homePageContentService.sliderData().then(
 			function(response){
-
+				$scope.dataArray = response.data;
+				console.log($scope.dataArray);	
 			},
 			function(response){
 
-			});		
-		homePageContentService.productCategory().then(
+			});
+		/*homePageContentService.productCategory().then(
 			function(response){
 				
 			},
@@ -34,7 +39,7 @@
 			},
 			function(response){
 
-			});		
+			});	*/	
 		console.log($scope.offerPageData);
 	}]);
 })();

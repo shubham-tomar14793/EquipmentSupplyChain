@@ -25,7 +25,9 @@ db.once('open',function(){
 
 /* ############# creating the schema for the database ###### */
 //router(app);
-app.use('/api/homePageContent',router);
+
+app.use('/api/navigationList',router);
+app.use('/api/sliderData',router);
 /* ############## the port configuration for the server ############### */
 var server = app.listen(3000,function(request,response){
   var address = server.address().address;

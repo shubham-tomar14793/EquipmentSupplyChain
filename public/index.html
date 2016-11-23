@@ -70,8 +70,8 @@
         <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z2">
             <md-list>
                 <md-list-item ng-repeat="item in list" md-ink-ripple="#3F51B5" class="pointer">
-                    <md-icon aria-label="" class="material-icons"><img ng-src="{{item.icon}}"></md-icon>
-                    <a href="{{item.pageLink}}">{{item.navigationTitle}}</a>
+                    <md-icon aria-label="item.label" class="material-icons"><img ng-src="{{item.icon}}"></md-icon>
+                    <a href="{{item.link}}">{{item.name}}</a>
                 </md-list-item>
             </md-list>
         </md-sidenav> <!-- sidenav ends here -->

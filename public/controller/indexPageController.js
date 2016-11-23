@@ -41,15 +41,18 @@
       console.log($scope.names);
       return $scope.names;
     }    
-  }  
+  };  
 
   $scope.list = [];
   myService.sideOpenMenu().then(
-    function(response){
-      $scope.list = response.data;
-      console.log($scope.list);
+    function(response){      
+      var responseData = response.data[0].sideOpenMenuData;
+      console.log(responseData);
+      $scope.list = responseData;      
     },
-    function(response){}
+    function(response){
+      console.log('failed');
+    }
   );
 
 }]);
